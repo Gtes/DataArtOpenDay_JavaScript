@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
+    <!-- <script src="js/arrToObj.js" defer></script> -->
+    <title>Countries Fetch Practice</title>
+</head>
+
+<body>
+    <div class="appContainer">
+        <div class="regionFilterContainer">
+
+        </div>
+
+        <div class="countriesContainer">
+
+        </div>
+    </div>
+
+
+    <script type="text/template" id="countryCardTemplate">
+        <div class="country-card">
+            <div class="country-card__flag"><img src="{{flag}}" alt="{{countryName}} flag"></div>
+        
+            <div divclass="country-card__text-info">
+                <div class="field">
+                    <span class="field__name">Name:</span> <span class="field__value">{{name}}</span>
+                </div>
+                <div class="field">
+                    <span class="field__name">Capital:</span> <span class="field__value">{{capital}}</span>
+                </div>
+                <div class="field">
+                    <span class="field__name">Region:</span> <span class="field__value">{{region}}</span>
+                </div>
+                <div class="field">
+                    <span class="field__name">Population:</span> <span class="field__value">{{population}}</span>
+                </div>
+                <div class="field">
+                    <span class="field__name">Timezones:</span> <span class="field__value">{{timezones}}</span>
+                </div>
+                <div class="field">
+                    <span class="field__name">Currencies:</span> <span class="field__value">{{currencies}}</span>
+                </div>
+                <div class="field">
+                    <span class="field__name">Translation:</span> <span class="field__value">de:{{de}}, es:{{es}}, it:{{it}}</span>
+                </div>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/template" id="regionFilterRadioTemplate">
+        <div class="radio-element">
+            <input type="radio" id="{{id}}" name="region" value="{{valueName}}">
+            <label for="{{inputId}}">{{labelName}}</label>
+        </div>
+    </script>
+</body>
+
+</html>
